@@ -1,4 +1,4 @@
-using System.Collections;
+ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -26,6 +26,6 @@ public class WindowSystem : MonoBehaviour, IDragHandler, IBeginDragHandler, IEnd
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        //transform.localPosition = _initialPosition; //SnapBack
+        //Snapback si bounds le l'objet en dehors des bounds de l'ecran
     }
 }
