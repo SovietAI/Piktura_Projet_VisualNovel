@@ -6,11 +6,10 @@ using UnityEngine.UI;
 using System;
 using UnityEngine.SceneManagement;
 using UnityEngine.Serialization;
-using Tymski; // Nécessaire pour la reference de scene
 
 public class SheetSystem : MonoBehaviour
 {
-    public SceneReference linkedScene;
+    public string linkedSceneName;
     
     void Update()
     {
@@ -20,9 +19,9 @@ public class SheetSystem : MonoBehaviour
         }
     }
 
-    public void SceneChange() // Script de changement de scene
+    private void SceneChange() // Script de changement de scene
     {
-        SceneManager.LoadScene(linkedScene);
+        SceneManager.LoadScene(linkedSceneName);
     }
 
 
